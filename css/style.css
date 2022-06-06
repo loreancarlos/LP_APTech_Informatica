@@ -6,12 +6,12 @@
 }
 
 :root {
-   font-family: 62.5%;
+   font-size: 62.5%;
    --ff-primary: "Helvetica", sans-serif;
 }
 
 body {
-   font-family: 1.6rem;
+   font-size: 1.6rem;
    background: url("../img/infra_ti_invertido.png")center right/cover no-repeat;
 
 }
@@ -35,19 +35,40 @@ header p {
    font-family: var(--ff-primary);
    color: white;
    font-weight: bold;
-   font-size: 4.0rem;
+   font-size: 7.0rem;
    display: grid;
 }
 
 header p span {
-   font-size: 1.6rem;
-   letter-spacing: 0.57rem;
+   font-size: 3rem;
+   letter-spacing: 0.9rem;
 }
 
 header img {
-   height: 6.5rem;
+   height: 13rem;
 }
 
-main h1 {
+main {
+   display: flex;
+}
+
+main section {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+#titulo{
+   width: 56.3rem;
+}
+
+#titulo h1 {
    color: white;
+   font-size: 4rem;
+   font-family: var(--ff-primary);
+   text-transform: uppercase;
+   text-align: end;
+
+   margin-top: 8rem;
 }
