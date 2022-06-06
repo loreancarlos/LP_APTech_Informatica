@@ -1,0 +1,53 @@
+* {
+   margin: 0;
+   border: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   font-family: 62.5%;
+   --ff-primary: "Helvetica", sans-serif;
+}
+
+body {
+   font-family: 1.6rem;
+   background: url("../img/infra_ti_invertido.png")center right/cover no-repeat;
+
+}
+
+#page {
+   background: rgb(4, 6, 57);
+   background: linear-gradient(135deg, rgba(4, 6, 57, 0.7287289915966386) 0%, rgba(150, 152, 255, 0.5130427170868348) 71%, rgba(255, 255, 255, 0) 100%);
+   display: flex;
+   flex-direction: column;
+
+   min-height: 100vh;
+   padding: 5.0rem 0 0 2.0rem;
+}
+
+header {
+   display: flex;
+   align-items: center;
+}
+
+header p {
+   font-family: var(--ff-primary);
+   color: white;
+   font-weight: bold;
+   font-size: 4.0rem;
+   display: grid;
+}
+
+header p span {
+   font-size: 1.6rem;
+   letter-spacing: 0.57rem;
+}
+
+header img {
+   height: 6.5rem;
+}
+
+main h1 {
+   color: white;
+}
