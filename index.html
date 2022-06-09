@@ -2,35 +2,80 @@
 <html lang="pt-BR">
 
 <head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Palanquin&family=Staatliches&display=swap"
+      rel="stylesheet">
    <link rel="stylesheet" href="./css/style.css">
    <title>APTech Informática - A equipe técnica dos seus sonhos</title>
 </head>
 
 <body>
-   <div id="page">
-      <header>
-         <img src="./img/so_logo_branca_sf.png" alt="Logo APTech Informática">
-         <p>APTech <span>Informática</span></p>
-      </header>
-      <main>
-         <section>
-            <div id="titulo">
+   <div class="bg">
+      <div id="lp_page">
+         <header>
+            <img src="./img/so_logo_branca_sf.png" alt="Logo APTech Informática">
+            <p>APTech <span>Informática</span></p>
+         </header>
+         <div id="form">
+            <section>
                <h1>O talento de inovar com responsabilidade e segurança</h1>
-            </div>
-            <p><span>Chegou a hora</span> da sua empresa tomar a decisão mais importante do ano. Escolha aprimorar toda
-               a
-               inteligência de sua empresa ao ter acesso a <span>melhor equipe de suporte</span> que você já viu!</p>
-         </section>
-         <form action="#">
-            <fieldset>
-               <legend>Agende o primeiro contato com o futuro da sua empresa</legend>
-               <input type="text" value="Digite seu nome">
-            </fieldset>
-         </form>
-      </main>
+               <p>Chegou a hora da sua empresa tomar a <span>decisão mais importante</span> do ano. Escolha aprimorar
+                  toda
+                  a
+                  inteligência de sua empresa ao ter acesso a <span>melhor equipe de suporte</span> que você já viu!</p>
+            </section>
+            <aside>
+               <div class="fieldset-legend">
+                  <p>Agende uma consultoria grátis</p>
+               </div>
+               <form action="#">
+                  <div class="fieldset-wrapper">
+                     <fieldset>
+                        <div class="input-wrapper">
+                           <label for="name">Nome</label>
+                           <input type="text" name="name" id="name" minlength="3">
+                        </div>
+                        <div class="input-wrapper">
+                           <label for="email">E-mail<span>(digite um email válido)</span></label>
+                           <input type="email" name="email" id="email">
+                        </div>
+                        <fieldset>
+                           <legend>Como podemos te ajudar?</legend>
+                           <div class="input-wrapper-checkbox">
+                              <div class="checkbox-wrapper">
+                                 <input type="checkbox" name="backup" id="backup">
+                                 <label for="backup">Suporte e Consultoria</label>
+                              </div>
+                              <div class="checkbox-wrapper">
+                                 <input type="checkbox" name="backup" id="backup">
+                                 <label for="backup">Backup em Nuvem</label>
+                              </div>
+                              <div class="checkbox-wrapper">
+                                 <input type="checkbox" name="servidor" id="servidor">
+                                 <label for="servidor">Servidor e Firewall</label>
+                              </div>
+                              <div class="checkbox-wrapper">
+                                 <input type="checkbox" name="email-corp" id="email-corp">
+                                 <label for="email-corp">Email Corporativo</label>
+                              </div>
+                           </div>
+                        </fieldset>
+                     </fieldset>
+                  </div>
+               </form>
+            </aside>
+         </div>
+      </div>
    </div>
+
+   <main>
+
+   </main>
 </body>
 
 </html>

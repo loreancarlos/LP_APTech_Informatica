@@ -8,31 +8,55 @@
 :root {
    font-size: 62.5%;
    --ff-primary: "Helvetica", sans-serif;
+   --ff-secondary: 'Staatliches', sans-serif;
+   --ff-others: 'Nunito', sans-serif;
 }
 
 body {
    font-size: 1.6rem;
-   background: url("../img/infra_ti_invertido.png")center right/cover no-repeat;
-
+   font-family: var(--ff-primary);
 }
 
-#page {
+.bg::before {
+   content: "";
+   background: url("../img/infra_ti_invertido.png")center right/cover no-repeat;
+
+   width: 100%;
+   height: 100%;
+
+   position: absolute;
+   z-index: -1;
+}
+
+.bg {
    background: rgb(4, 6, 57);
    background: linear-gradient(135deg, rgba(4, 6, 57, 0.7287289915966386) 0%, rgba(150, 152, 255, 0.5130427170868348) 71%, rgba(255, 255, 255, 0) 100%);
+   position: relative;
+
+   max-width: 192.0rem;
+   margin: auto;
+}
+
+#lp_page {
    display: flex;
    flex-direction: column;
 
-   min-height: 100vh;
-   padding: 5.0rem 0 0 2.0rem;
+   max-width: 128.0rem;
+   padding: 5.0rem;
+   margin: auto;
 }
 
 header {
    display: flex;
    align-items: center;
+   justify-content: center;
+   gap: 3rem;
+   width: 56.3rem;
+
+   animation: shine 800ms 250ms backwards;
 }
 
 header p {
-   font-family: var(--ff-primary);
    color: white;
    font-weight: bold;
    font-size: 7.0rem;
@@ -48,27 +72,206 @@ header img {
    height: 13rem;
 }
 
-main {
+#form {
    display: flex;
+   justify-content: space-between;
+   gap: 5rem;
 }
 
-main section {
-   width: 50%;
+#form section {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+   gap: 5rem;
 }
 
-#titulo{
-   width: 56.3rem;
-}
-
-#titulo h1 {
+#form section h1 {
    color: white;
-   font-size: 4rem;
-   font-family: var(--ff-primary);
+   font-size: 3.7rem;
    text-transform: uppercase;
    text-align: end;
 
+   width: 56.3rem;
    margin-top: 8rem;
+   padding: 2rem;
+
+   animation: leftRight 500ms 500ms backwards;
 }
+
+#form section p {
+   color: white;
+   font-size: 1.74rem;
+   transition: transform 300ms;
+   padding: 2rem;
+   width: 56.3rem;
+
+   animation: rightLeft 500ms 1000ms backwards;
+}
+
+#form section p:hover {
+   transform: scale(1.1);
+   background-color: rgba(0, 0, 0, 0.288);
+   border-radius: 0.5rem;
+}
+
+#form section p span {
+   font-weight: bold;
+   color: #FFFFFF;
+   text-shadow: 0 0 10px #dfdb00;
+}
+
+
+aside {
+   border-radius: 1rem;
+   background-color: rgba(255, 255, 255);
+   font-family: var(--ff-others);
+   animation: rightLeftForm 800ms 1000ms backwards;
+
+   max-width: fit-content;
+}
+
+aside form {
+   padding: 3rem 4rem 3rem;
+}
+
+
+.fieldset-wrapper fieldset {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.fieldset-wrapper fieldset fieldset legend {
+   margin-bottom: 2rem;
+}
+
+.fieldset-legend {
+   line-height: 2.5rem;
+   background-color: rgba(173, 216, 230, 0.534);
+   border-radius: 1rem 1rem 0 0;
+   color: rgb(3, 3, 139);
+   font-size: 2.5rem;
+   font-weight: 800;
+   text-align: center;
+
+   padding: 3rem 4rem;
+}
+
+.input-wrapper {
+   display: grid;
+   gap: 0.8rem;
+}
+
+.input-wrapper label {
+   color: #4E4958;
+   font-size: 1.8rem;
+   display: flex;
+   align-items: center;
+}
+
+.input-wrapper label span {
+   margin-left: 0.8rem;
+   font-size: 1.2rem;
+   line-height: 2.0rem;
+   color: #a6a2af;
+}
+
+label span:hover {
+   color: #4E4958;
+}
+
+.input-wrapper input {
+   background: #FAFAFC;
+   font-size: 1.8rem;
+   border: 1px solid #E6E6F0;
+   border-radius: 0.8rem;
+   height: 4.2rem;
+   padding: 0 1.5rem;
+}
+
+.input-wrapper-checkbox {
+   display: grid;
+   grid-template-areas: "Sup Bac""Ser Ema";
+   gap: 1.5rem;
+}
+
+.checkbox-wrapper {
+   display: flex;
+   padding: 2rem;
+   background-color: rgb(2, 2, 88);
+   border-radius: 0.8rem;
+   color: white;
+   font-weight: bold;
+}
+
+.checkbox-wrapper:hover{
+   transform: scale(1.05);
+}
+
+@keyframes leftRight {
+   0% {
+      opacity: 0;
+      transform: translateX(-5rem);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes rightLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(+5rem);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes rightLeftForm {
+   0% {
+      opacity: 0;
+      transform: translateX(+50rem);
+   }
+
+   30% {
+      opacity: 1;
+      transform: translateX(-7rem);
+   }
+
+   60% {
+      transform: translateX(+4rem);
+   }
+
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes shine {
+   0% {
+      transform: scale(1);
+      opacity: 0;
+   }
+
+   50% {
+      transform: scale(1.2);
+      opacity: 1;
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+@media (max-width:1024px) {
+   :root {
+      font-size: 55%;
+   }
+}
+
+@media (max-width:955px) {}
