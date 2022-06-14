@@ -10,6 +10,7 @@
    --ff-primary: "Helvetica", sans-serif;
    --ff-secondary: 'Staatliches', sans-serif;
    --ff-others: 'Nunito', sans-serif;
+   --ff-second_page: 'Roboto', sans-serif;
 }
 
 body {
@@ -126,14 +127,17 @@ aside {
    background-color: rgba(255, 255, 255);
    font-family: var(--ff-others);
    animation: rightLeftForm 800ms 1000ms backwards;
-
-   max-width: fit-content;
 }
 
 aside form {
    padding: 3rem 4rem 3rem;
 }
 
+.fieldset-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
 
 .fieldset-wrapper fieldset {
    display: flex;
@@ -143,6 +147,25 @@ aside form {
 
 .fieldset-wrapper fieldset fieldset legend {
    margin-bottom: 2rem;
+   font-size: 1.8rem;
+}
+
+.fieldset-wrapper>input {
+   font-size: 2rem;
+   font-family: var(--ff-others);
+   text-transform: uppercase;
+   font-weight: bold;
+   color: white;
+   background-color: rgb(77, 201, 77);
+   cursor: pointer;
+
+   padding: 1.9rem;
+   border-radius: 1rem;
+}
+
+.fieldset-wrapper>input:hover {
+   transform: scale(1.05);
+   background-color: rgb(3, 180, 3);
 }
 
 .fieldset-legend {
@@ -192,6 +215,8 @@ label span:hover {
 .input-wrapper-checkbox {
    display: grid;
    grid-template-areas: "Sup Bac""Ser Ema";
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
    gap: 1.5rem;
 }
 
@@ -199,13 +224,11 @@ label span:hover {
    display: flex;
    align-items: center;
    justify-content: center;
+   text-align: center;
    padding: 2rem;
    background-color: rgb(2, 2, 88);
    border-radius: 0.8rem;
-   color: white;
-   font-weight: bold;
 
-   cursor: pointer;
    position: relative;
 }
 
@@ -222,23 +245,70 @@ label span:hover {
    opacity: 0;
 }
 
-.checkbox-wrapper input:checked+.checkbox-wrapper::before {
-background-color: black;
+.checkbox-wrapper p {
+   color: white;
+   font-weight: bold;
+   user-select: none;
 }
 
-
-.checkbox-wrapper::before {
+.checkbox-wrapper label::before {
    content: "";
    position: absolute;
    display: block;
    background-color: white;
-   border: 1px solid white;
    border-radius: 100%;
    top: 0.6rem;
    left: 0.6rem;
 
-   width: 1.2rem;
-   height: 1.2rem;
+   width: 1.3rem;
+   height: 1.3rem;
+}
+
+.checkbox-wrapper input:checked+label::before {
+   background-color: lightskyblue;
+}
+
+/* Video PAGE */
+
+main {
+   font-family: var(--ff-second_page);
+
+   max-width: 192rem;
+   margin: auto;
+}
+
+main section {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   gap: 5rem;
+
+   max-width: 128rem;
+   padding: 5rem;
+   margin: auto;
+}
+
+main section h2 {
+   font-weight: bold;
+   font-size: 4rem;
+   border-bottom: 2px solid rgba(3, 3, 139, 0.247);
+}
+
+main section h2 span {}
+
+main section .video_text {
+   display: flex;
+}
+
+main section .video_text .partner_text {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex: 1;
+}
+
+main section .video_text .partner_text h3 {
+   text-transform: uppercase;
 }
 
 @keyframes leftRight {
