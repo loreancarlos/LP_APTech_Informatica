@@ -197,15 +197,48 @@ label span:hover {
 
 .checkbox-wrapper {
    display: flex;
+   align-items: center;
+   justify-content: center;
    padding: 2rem;
    background-color: rgb(2, 2, 88);
    border-radius: 0.8rem;
    color: white;
    font-weight: bold;
+
+   cursor: pointer;
+   position: relative;
 }
 
-.checkbox-wrapper:hover{
+.checkbox-wrapper:hover {
    transform: scale(1.05);
+}
+
+.checkbox-wrapper input {
+   position: absolute;
+   top: 0.6rem;
+   left: 0.6rem;
+   width: 1.2rem;
+   height: 1.2rem;
+   opacity: 0;
+}
+
+.checkbox-wrapper input:checked+.checkbox-wrapper::before {
+background-color: black;
+}
+
+
+.checkbox-wrapper::before {
+   content: "";
+   position: absolute;
+   display: block;
+   background-color: white;
+   border: 1px solid white;
+   border-radius: 100%;
+   top: 0.6rem;
+   left: 0.6rem;
+
+   width: 1.2rem;
+   height: 1.2rem;
 }
 
 @keyframes leftRight {
