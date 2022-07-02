@@ -16,9 +16,16 @@
 body {
    font-size: 1.6rem;
    font-family: var(--ff-primary);
+
+   overflow-x: hidden;
 }
 
-.bg::before {
+#app {
+   max-width: 192.0rem;
+   margin: auto;
+}
+
+.bg_lp_page::before {
    content: "";
    background: url("../img/infra_ti_invertido.png")center right/cover no-repeat;
 
@@ -29,21 +36,19 @@ body {
    z-index: -1;
 }
 
-.bg {
-   background: rgb(4, 6, 57);
+.bg_lp_page {
    background: linear-gradient(135deg, rgba(4, 6, 57, 0.7287289915966386) 0%, rgba(150, 152, 255, 0.5130427170868348) 71%, rgba(255, 255, 255, 0) 100%);
    position: relative;
 
-   max-width: 192.0rem;
-   margin: auto;
+   width: 100%;
 }
 
-#lp_page {
+.lp_page {
    display: flex;
    flex-direction: column;
 
    max-width: 128.0rem;
-   padding: 5.0rem;
+   padding: 5.0rem 10rem 5.0rem 5.0rem;
    margin: auto;
 }
 
@@ -236,13 +241,17 @@ label span:hover {
    transform: scale(1.05);
 }
 
-.checkbox-wrapper input {
+.sr-only {
    position: absolute;
-   top: 0.6rem;
-   left: 0.6rem;
-   width: 1.2rem;
-   height: 1.2rem;
-   opacity: 0;
+   width: 0px;
+   height: 0px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+   top: 0;
+   right: 0;
 }
 
 .checkbox-wrapper p {
@@ -251,12 +260,11 @@ label span:hover {
    user-select: none;
 }
 
-.checkbox-wrapper label::before {
+.checkbox-wrapper p::before {
    content: "";
-   position: absolute;
-   display: block;
    background-color: white;
    border-radius: 100%;
+   position: absolute;
    top: 0.6rem;
    left: 0.6rem;
 
@@ -264,7 +272,7 @@ label span:hover {
    height: 1.3rem;
 }
 
-.checkbox-wrapper input:checked+label::before {
+.checkbox-wrapper input:checked+p::before {
    background-color: lightskyblue;
 }
 
@@ -298,6 +306,7 @@ main section h2 span {}
 
 main section .video_text {
    display: flex;
+   flex-direction: column;
 }
 
 main section .video_text .partner_text {
@@ -309,6 +318,33 @@ main section .video_text .partner_text {
 
 main section .video_text .partner_text h3 {
    text-transform: uppercase;
+}
+
+footer {
+   position: relative;
+
+   width: 100%;
+}
+
+footer .whatsapp-wrapper {
+   position: fixed;
+   right: 1rem;
+   bottom: 1rem;
+}
+
+footer .whatsapp-wrapper a img {
+   animation: rightLeftForm 800ms 1200ms backwards;
+
+   width: 10rem;
+   height: 10rem;
+}
+
+footer .whatsapp-wrapper a img.shake-off {
+   animation: none;
+}
+
+footer .whatsapp-wrapper a img.shake-on {
+   animation: shake 200ms backwards;
 }
 
 @keyframes leftRight {
@@ -371,10 +407,38 @@ main section .video_text .partner_text h3 {
    }
 }
 
-@media (max-width:1024px) {
+@keyframes shake {
+   0% {
+      transform: translateX(0rem);
+   }
+
+   25% {
+      transform: translateX(1rem);
+   }
+
+   50% {
+      transform: translateX(-1rem);
+   }
+
+   75% {
+      transform: translateX(1rem);
+   }
+
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@media (max-width:1150px) {
    :root {
       font-size: 55%;
    }
 }
 
 @media (max-width:955px) {}
+
+@media (min-width:1920px) {
+   footer .whatsapp-wrapper {
+      position: absolute;
+   }
+}

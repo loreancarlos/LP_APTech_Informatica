@@ -3,95 +3,109 @@
 
 <head>
    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700Nunito:wght@400;800&family=Palanquin&family=Staatliches&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Palanquin&family=Roboto:wght@700&family=Staatliches&display=swap"
       rel="stylesheet">
+
    <link rel="stylesheet" href="./css/style.css">
    <title>APTech Informática - A equipe técnica dos seus sonhos</title>
 </head>
 
 <body>
-   <div class="bg">
-      <div id="lp_page">
-         <header>
-            <img src="./img/so_logo_branca_sf.png" alt="Logo APTech Informática">
-            <p>APTech <span>Informática</span></p>
-         </header>
-         <div id="form">
-            <section>
-               <h1>O talento de inovar com responsabilidade e segurança</h1>
-               <p>Chegou a hora da sua empresa tomar a <span>decisão mais importante</span> do ano. Escolha aprimorar
-                  toda
-                  a
-                  inteligência de sua empresa ao ter acesso a <span>melhor equipe de suporte</span> que você já viu!</p>
-            </section>
-            <aside>
-               <div class="fieldset-legend">
-                  <p>Agende uma consultoria grátis</p>
-               </div>
-               <form action="#" method="post">
-                  <div class="fieldset-wrapper">
-                     <fieldset>
-                        <div class="input-wrapper">
-                           <label for="name">Nome</label>
-                           <input type="text" name="name" id="name" minlength="3" required>
-                        </div>
-                        <div class="input-wrapper">
-                           <label for="email">E-mail<span>(digite um email válido)</span></label>
-                           <input type="email" name="email" id="email" required>
-                        </div>
-                        <fieldset>
-                           <legend>Como podemos te ajudar?</legend>
-                           <div class="input-wrapper-checkbox">
-                              <div class="checkbox-wrapper">
-                                 <input type="checkbox" name="suporte" id="suporte">
-                                 <label for="suporte"></label>
-                                 <p>Suporte e Consultoria</p>
-                              </div>
-                              <div class="checkbox-wrapper">
-                                 <input type="checkbox" name="backup" id="backup">
-                                 <label for="backup"></label>
-                                 <p>Backup em Nuvem</label>
-                              </div>
-                              <div class="checkbox-wrapper">
-                                 <input type="checkbox" name="servidor" id="servidor">
-                                 <label for="servidor"></label>
-                                 <p>Servidor e Firewall</label>
-                              </div>
-                              <div class="checkbox-wrapper">
-                                 <input type="checkbox" name="email-corp" id="email-corp">
-                                 <label for="email-corp"></label>
-                                 <p>Email Corporativo</label>
-                              </div>
-                           </div>
-                        </fieldset>
-                     </fieldset>
-                     <input type="submit" name="submitForm" id="submitForm" value="Enviar">
+   <div id="app">
+      <div class="bg_lp_page">
+         <div class="lp_page">
+            <header>
+               <img src="./img/so_logo_branca_sf.png" alt="Logo APTech Informática">
+               <p>APTech <span>Informática</span></p>
+            </header>
+            <div id="form">
+               <section>
+                  <h1>O talento de inovar com responsabilidade e segurança</h1>
+                  <p>Chegou a hora da sua empresa tomar a <span>decisão mais importante</span> do ano. Escolha aprimorar
+                     toda
+                     a
+                     inteligência de sua empresa ao ter acesso a <span>melhor equipe de suporte</span> que você já viu!
+                  </p>
+               </section>
+               <aside>
+                  <div class="fieldset-legend">
+                     <p>Agende uma consultoria grátis</p>
                   </div>
-               </form>
-            </aside>
-         </div>
-      </div>
-   </div>
-
-   <main>
-      <section>
-         <h2>Relato de <span>Parceiros</span></h2>
-         <div class="video_text">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/V1bFr2SWP1I"
-               title="YouTube video player" frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen></iframe>
-            <div class="partner_text">
-               <h3>Atual Contabilidade</h3>
+                  <form action="#" method="post">
+                     <div class="fieldset-wrapper">
+                        <fieldset>
+                           <div class="input-wrapper">
+                              <label for="name">Nome</label>
+                              <input type="text" name="name" id="name" minlength="3" required>
+                           </div>
+                           <div class="input-wrapper">
+                              <label for="email">E-mail<span>(digite um email válido)</span></label>
+                              <input type="email" name="email" id="email" required>
+                           </div>
+                           <fieldset>
+                              <legend>Como podemos te ajudar?</legend>
+                              <div class="input-wrapper-checkbox">
+                                 <div class="checkbox-wrapper">
+                                    <input class="sr-only" type="checkbox" name="suporte" id="suporte">
+                                    <p>Suporte e Consultoria</p>
+                                    <label for="suporte"></label>
+                                 </div>
+                                 <div class="checkbox-wrapper">
+                                    <input class="sr-only" type="checkbox" name="backup" id="backup">
+                                    <p>Backup em Nuvem</label>
+                                       <label for="backup"></label>
+                                 </div>
+                                 <div class="checkbox-wrapper">
+                                    <input class="sr-only" type="checkbox" name="servidor" id="servidor">
+                                    <p>Servidor e Firewall</label>
+                                       <label for="servidor"></label>
+                                 </div>
+                                 <div class="checkbox-wrapper">
+                                    <input class="sr-only" type="checkbox" name="email-corp" id="email-corp">
+                                    <p>Email Corporativo</label>
+                                       <label for="email-corp"></label>
+                                 </div>
+                              </div>
+                           </fieldset>
+                        </fieldset>
+                        <input type="submit" name="submitForm" id="submitForm" value="Enviar">
+                     </div>
+                  </form>
+               </aside>
             </div>
          </div>
-      </section>
-   </main>
+      </div>
+
+      <main>
+         <section>
+            <h2>Feedback de <span>Parceiros</span></h2>
+            <div class="video_text">
+               <div class="partner_text">
+                  <h3>Atual Contabilidade</h3>
+               </div>
+               <div class="video_media">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/V1bFr2SWP1I"
+                     title="YouTube video player" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen></iframe>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <div class="whatsapp-wrapper">
+            <a href="https://api.whatsapp.com/send?phone=5531991370827&text=Ol%C3%A1.%20Fiquei%20interessado%20nos%20servi%C3%A7os%20da%20APTech%20e%20gostaria%20de%20saber%20mais."
+               target="_blank">
+               <img src="./img/WhatsApp.png" alt="Botão direcionando para o WhatsApp">
+            </a>
+         </div>
+      </footer>
+   </div>
    <script src="./js/script.js"></script>
 </body>
 
