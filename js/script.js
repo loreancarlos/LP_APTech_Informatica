@@ -8,7 +8,6 @@ checkBoxWrapper.forEach((element) => {
    });
 });
 
-
 buttonWhatsApp.addEventListener("mouseover", () => {
    buttonWhatsApp.classList.add("shake-on");
    buttonWhatsApp.classList.remove("shake-off");
@@ -19,3 +18,10 @@ buttonWhatsApp.addEventListener("mouseout", () => {
    buttonWhatsApp.classList.add("shake-off");
 });
 
+$('.carousel').slick({
+   dots: true,
+   infinite: true,
+   speed: 500,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+});
