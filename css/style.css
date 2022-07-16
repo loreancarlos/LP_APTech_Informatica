@@ -417,7 +417,7 @@ footer .page .map-wrapper .map iframe{
 }
 
 footer .page .info-wrapper{
-   text-align: left;
+   text-align: center;
 }
 
 footer .page .info-wrapper h2{
@@ -437,8 +437,8 @@ footer .whatsapp-wrapper {
 footer .whatsapp-wrapper a img {
    animation: rightLeftForm 800ms 1200ms backwards;
 
-   width: 10rem;
-   height: 10rem;
+   width: 8rem;
+   height: 8rem;
 }
 
 footer .whatsapp-wrapper a img.shake-off {
