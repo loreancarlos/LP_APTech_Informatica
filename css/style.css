@@ -11,7 +11,7 @@
    --ff-secondary: 'Staatliches', sans-serif;
    --ff-others: 'Nunito', sans-serif;
    --ff-second_page: 'Roboto', sans-serif;
-
+   --buttonWidth: 1.9rem;
    --brightness-img: 0.7;
 }
 
@@ -48,7 +48,7 @@ body {
    position: relative;
 
    width: 100%;
-   height: 100vh;
+   /* height: 100vh; */
 }
 
 .lp_page {
@@ -133,7 +133,6 @@ header img {
    color: #FFFFFF;
    text-shadow: 0 0 10px #dfdb00;
 }
-
 
 aside {
    border-radius: 1rem;
@@ -342,6 +341,26 @@ main .carousel .partner-wrapper .comment-wrapper .video-wrapper {
    gap: 1.5rem;
 }
 
+main>input {
+   font-size: 2rem;
+   font-family: var(--ff-others);
+   text-transform: uppercase;
+   font-weight: bold;
+   color: white;
+   background-color: rgb(77, 201, 77);
+   cursor: pointer;
+
+   width: 100%;
+   padding: 1.9rem;
+   border-radius: 1rem;
+   margin-top: 5rem;
+}
+
+main>input:hover {
+   transform: scale(1.05);
+   background-color: rgb(3, 180, 3);
+}
+
 .slick-slider .slick-track, .slick-slider .slick-list {
    width: 90%;
    margin: auto;
@@ -364,7 +383,7 @@ main .carousel .partner-wrapper .comment-wrapper .video-wrapper {
    left: 0;
 }
 
-.slick-prev:before,.slick-next:before {
+.slick-prev:before, .slick-next:before {
    font-size: 5rem;
    line-height: 1;
 
@@ -385,18 +404,18 @@ footer {
    width: 100%;
 }
 
-footer .page{
+footer .page {
    max-width: 128rem;
    width: 100%;
    margin: auto;
 }
 
-footer .page .map-wrapper{
+footer .page .map-wrapper {
    display: flex;
    flex-direction: column;
 }
 
-footer .page .map-wrapper .title h2{
+footer .page .map-wrapper .title h2 {
    display: inline-block;
    font-size: 4rem;
 
@@ -404,23 +423,23 @@ footer .page .map-wrapper .title h2{
    margin: 8rem 0;
 }
 
-footer .page .map-wrapper .map{
+footer .page .map-wrapper .map {
    border: 2px solid rgba(0, 0, 0, 0.404);
    border-radius: 1rem;
    overflow: hidden;
 }
 
-footer .page .map-wrapper .map iframe{
+footer .page .map-wrapper .map iframe {
    max-width: 128rem;
    width: 100%;
    height: 40rem;
 }
 
-footer .page .info-wrapper{
+footer .page .info-wrapper {
    text-align: center;
 }
 
-footer .page .info-wrapper h2{
+footer .page .info-wrapper h2 {
    display: inline-block;
    font-size: 3.5rem;
 
