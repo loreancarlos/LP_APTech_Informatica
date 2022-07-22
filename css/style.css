@@ -288,10 +288,11 @@ label span:hover {
 
 main {
    font-family: var(--ff-second_page);
+   text-align: center;
 
+   width: 100%;
    max-width: 128rem;
    margin: auto;
-   text-align: center;
 }
 
 main section {
@@ -629,7 +630,15 @@ footer .whatsapp-wrapper a img.shake-on {
    }
 }
 
-@media (max-width:955px) {}
+@media (max-width:1024px) {
+   .form-wrapper {
+      flex-direction: column;
+      align-items: center;
+   }
+   aside {
+      max-width: 51rem;
+   }
+}
 
 @media (min-width:1921px) {
    footer .whatsapp-wrapper {
