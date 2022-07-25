@@ -15,6 +15,10 @@
    --brightness-img: 0.7;
 }
 
+html{
+   scroll-behavior: smooth;
+}
+
 body {
    font-size: 1.6rem;
    font-family: var(--ff-primary);
