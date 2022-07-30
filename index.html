@@ -44,7 +44,7 @@
                   <div class="fieldset-legend">
                      <p>Agende uma consultoria grátis</p>
                   </div>
-                  <form action="#" method="post">
+                  <form action="http://localhost:3333/mail" method="get">
                      <div class="fieldset-wrapper">
                         <fieldset>
                            <div class="input-wrapper">
@@ -54,6 +54,10 @@
                            <div class="input-wrapper">
                               <label for="email">E-mail<span>(digite um email válido)</span></label>
                               <input type="email" name="email" id="email" required>
+                           </div>
+                           <div class="input-wrapper">
+                              <label for="tel">Celular <span>(opcional)</span></label>
+                              <input type="tel" name="tel" id="tel" maxlength="15">
                            </div>
                            <fieldset>
                               <legend>Como podemos te ajudar?</legend>

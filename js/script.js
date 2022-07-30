@@ -42,3 +42,12 @@ $('.carousel').slick({
    slidesToShow: 1,
    slidesToScroll: 1,
 });
+
+const tel = document.getElementById("tel");
+
+tel.addEventListener("keyup", (event) => {
+   let value = event.target.value.replace(/\D/g, "");
+   value = value.replace(/^(\d\d)(\d)/g, "($1) $2");
+   value = value.replace(/(\d{5})(\d)/, "$1-$2");
+   event.target.value = value;
+});
