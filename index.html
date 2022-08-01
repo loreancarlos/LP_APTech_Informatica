@@ -44,7 +44,7 @@
                   <div class="fieldset-legend">
                      <p>Agende uma consultoria grátis</p>
                   </div>
-                  <form action="http://localhost:3333/mail" method="get">
+                  <form action="https://appmailer-aptech.herokuapp.com/mail" method="get" target="_blank">
                      <div class="fieldset-wrapper">
                         <fieldset>
                            <div class="input-wrapper">
@@ -60,7 +60,7 @@
                               <input type="tel" name="tel" id="tel" maxlength="15">
                            </div>
                            <fieldset>
-                              <legend>Como podemos te ajudar?</legend>
+                              <legend>Como podemos te ajudar? <span>(opcional)</span></legend>
                               <div class="input-wrapper-checkbox">
                                  <div class="checkbox-wrapper">
                                     <input class="sr-only" type="checkbox" name="suporte" id="suporte">
@@ -78,9 +78,9 @@
                                        <label for="servidor"></label>
                                  </div>
                                  <div class="checkbox-wrapper">
-                                    <input class="sr-only" type="checkbox" name="email-corp" id="email-corp">
+                                    <input class="sr-only" type="checkbox" name="emailCorp" id="emailCorp">
                                     <p>Email Corporativo</label>
-                                       <label for="email-corp"></label>
+                                       <label for="emailCorp"></label>
                                  </div>
                               </div>
                            </fieldset>
