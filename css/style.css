@@ -208,14 +208,14 @@ aside form {
    align-items: center;
 }
 
-.input-wrapper label span {
+.input-wrapper label span,legend span {
    margin-left: 0.8rem;
    font-size: 1.2rem;
    line-height: 2.0rem;
    color: #a6a2af;
 }
 
-label span:hover {
+label span:hover,legend span:hover {
    color: #4E4958;
 }
 
