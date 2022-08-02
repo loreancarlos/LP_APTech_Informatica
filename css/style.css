@@ -15,7 +15,7 @@
    --brightness-img: 0.7;
 }
 
-html{
+html {
    scroll-behavior: smooth;
 }
 
@@ -208,14 +208,14 @@ aside form {
    align-items: center;
 }
 
-.input-wrapper label span,legend span {
+.input-wrapper label span, legend span {
    margin-left: 0.8rem;
    font-size: 1.2rem;
    line-height: 2.0rem;
    color: #a6a2af;
 }
 
-label span:hover,legend span:hover {
+label span:hover, legend span:hover {
    color: #4E4958;
 }
 
@@ -274,7 +274,7 @@ label span:hover,legend span:hover {
 .checkbox-wrapper p::before {
    content: "";
    background-color: white;
-   border: .4rem solid white;
+   border: .3rem solid white;
    border-radius: 100%;
    position: absolute;
    top: 0.6rem;
@@ -286,6 +286,10 @@ label span:hover,legend span:hover {
 
 .checkbox-wrapper input:checked+p::before {
    background-color: black;
+}
+
+.checkbox-wrapper input:focus+p::before {
+   outline: 3px solid lightblue;
 }
 
 /* Video PAGE */

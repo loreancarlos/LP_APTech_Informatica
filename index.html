@@ -44,7 +44,7 @@
                   <div class="fieldset-legend">
                      <p>Agende uma consultoria grátis</p>
                   </div>
-                  <form action="https://appmailer-aptech.herokuapp.com/mail" method="get" target="_blank">
+                  <form id="emailForm" action="https://appmailer-aptech.herokuapp.com/mail" method="get">
                      <div class="fieldset-wrapper">
                         <fieldset>
                            <div class="input-wrapper">
@@ -52,7 +52,7 @@
                               <input type="text" name="name" id="name" minlength="3" required>
                            </div>
                            <div class="input-wrapper">
-                              <label for="email">E-mail<span>(digite um email válido)</span></label>
+                              <label for="email">E-mail</label>
                               <input type="email" name="email" id="email" required>
                            </div>
                            <div class="input-wrapper">
@@ -184,7 +184,7 @@
          </div>
       </footer>
    </div>
-   <script src="./js/script.js"></script>
+   <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
