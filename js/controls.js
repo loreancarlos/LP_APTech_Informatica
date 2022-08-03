@@ -3,7 +3,8 @@ import { appMail } from "./appMail.js";
 export function Controls() {
 
    async function sendEmail() {
-      const statusScreen = document.querySelector("#screen-wrapper");
+      const statusScreen = document.querySelector("#statusScreen");
+
       statusScreen.classList.remove("hide");
 
       const name = document.querySelector("#name").value;
@@ -17,15 +18,21 @@ export function Controls() {
       const response = await appMail.send({ name, email, tel, services, ip });
 
       if (response.status == "200") {
-         statusScreen.firstElementChild.firstElementChild.src = "./img/ok.png";
+         statusScreen.firstElementChild.firstElementChild.setAttribute("src", "./img/ok.png");
       } else {
          statusScreen.firstElementChild.lastElementChild.textContent = "NÂO CONSEGUIMOS ENVIAR SEU EMAIL. MANDE MENSAGEM PELO WHATSAPP";
-         statusScreen.firstElementChild.firstElementChild.src = "./img/error.png";
+         statusScreen.firstElementChild.firstElementChild.setAttribute("src", "./img/error.png");
       }
-      setInterval(() => {
 
-      }, 3000);
+      await delay(2);
+
       statusScreen.classList.add("hide");
+   }
+
+   function delay(n) {
+      return new Promise(function (resolve) {
+         setTimeout(resolve, n * 1000);
+      });
    }
 
    function setServices(services) {
