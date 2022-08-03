@@ -5,10 +5,10 @@ export function Events(emailForm, controls) {
    const widthSubmitButton = submitButton.getBoundingClientRect().width.toFixed(0);
    const widthRem = widthSubmitButton.toString().slice(0, -1);
 
-   /* resendButton.setAttribute("style", `max-width:${widthRem}rem`);
+   resendButton.setAttribute("style", `max-width:${widthRem}rem`);
    resendButton.addEventListener("click", () => {
       window.scrollTo(0, 0);
-   }); */
+   });
 
    toTopSubmitForm.addEventListener("click", () => {
       window.scrollTo(0, 0);
@@ -39,6 +39,7 @@ export function Events(emailForm, controls) {
 
    emailForm.addEventListener("submit", (event) => {
       event.preventDefault();
+      
       controls.sendEmail();
    });
 }

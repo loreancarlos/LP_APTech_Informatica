@@ -3,17 +3,29 @@ import { appMail } from "./appMail.js";
 export function Controls() {
 
    async function sendEmail() {
+      const statusScreen = document.querySelector("#screen-wrapper");
+      statusScreen.classList.remove("hide");
+
       const name = document.querySelector("#name").value;
       const email = document.querySelector("#email").value;
       const inputCheckBox = document.querySelectorAll(".checkbox-wrapper input");
 
-      const tel = document.querySelector("#tel");
+      const tel = document.querySelector("#tel").value;
       const services = setServices(inputCheckBox);
-      const ip = await getIpClient();
+      const { ip } = await getIpClient();
 
-      /*     const response = appMail.send({ name, email, tel, services });
-    
-          console.log(response + " FIM"); */
+      const response = await appMail.send({ name, email, tel, services, ip });
+
+      if (response.status == "200") {
+         statusScreen.firstElementChild.firstElementChild.src = "./img/ok.png";
+      } else {
+         statusScreen.firstElementChild.lastElementChild.textContent = "NÂO CONSEGUIMOS ENVIAR SEU EMAIL. MANDE MENSAGEM PELO WHATSAPP";
+         statusScreen.firstElementChild.firstElementChild.src = "./img/error.png";
+      }
+      setInterval(() => {
+
+      }, 3000);
+      statusScreen.classList.add("hide");
    }
 
    function setServices(services) {
@@ -32,9 +44,8 @@ export function Controls() {
    }
 
    function getIpClient() {
-         return fetch('https://api.ipify.org?format=json').then(data => data.json()).then(data => {console.log(data);console.log("AQUIII")});
+      return fetch('https://api.ipify.org?format=json').then(data => data.json());
    }
-
 
    return { sendEmail }
 }
