@@ -51,7 +51,7 @@ export function Controls() {
    }
 
    function getIpClient() {
-      return fetch('https://api.ipify.org?format=json').then(data => data.json());
+      return fetch('https://api.ipify.org?format=json').then(data => data.json()).catch(error => "");
    }
 
    return { sendEmail }
