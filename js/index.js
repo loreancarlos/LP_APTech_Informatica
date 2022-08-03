@@ -4,6 +4,7 @@ import { emailForm } from "./elements.js";
 
 const controls = Controls();
 
+
 Events(emailForm, controls);
 
 $('.carousel').slick({
