@@ -23,10 +23,10 @@ export function Controls() {
          statusScreen.firstElementChild.lastElementChild.textContent = "NÂO CONSEGUIMOS ENVIAR SEU EMAIL. MANDE MENSAGEM PELO WHATSAPP";
          statusScreen.firstElementChild.firstElementChild.setAttribute("src", "./img/error.png");
       }
-
       await delay(2);
-
       statusScreen.classList.add("hide");
+      await delay(0.8);
+      location.reload();
    }
 
    function delay(n) {

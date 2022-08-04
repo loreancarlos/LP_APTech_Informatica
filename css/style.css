@@ -712,11 +712,12 @@ footer .whatsapp-wrapper a img.shake-on {
 
    .form-wrapper section h1 {
       text-align: center;
-      font-size: 3.2rem;
+      font-size: 3.3rem;
       width: 100%;
    }
 
    .form-wrapper section p {
+      font-size: 2.1rem;
       width: 100%;
       text-align: justify;
    }
