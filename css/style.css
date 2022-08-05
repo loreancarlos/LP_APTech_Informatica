@@ -38,7 +38,7 @@ body {
 
 .bg_lp_page::before {
    content: "";
-   background: url("../img/infra_ti_invertido.png")center right/cover no-repeat;
+   background: url("../img/infra_ti_invertido.jpg")center right/cover no-repeat;
 
    width: 100%;
    height: 100%;
